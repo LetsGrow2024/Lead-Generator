@@ -1,8 +1,9 @@
-import requests
 import streamlit as st
+import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 import json
+import smtplib
 
 
 st.set_page_config(page_title="Lets Grow Together", page_icon=":tada:", layout="wide")
@@ -31,7 +32,7 @@ with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         st.header("What We Do")
-        st.write("We resarch the zip code in which you provide, and identify a list of businesses that potentially benefit from your products or services. Once we have this list established we send this list to you for approval. After you approve the list, we start out calling and advertising your business.")
+        st.write("We resarch the zip code in which you provide, and identify a list of businesses that potentially benefit from your products or services. Once we have this list established we send this list to you for approval. After you approve the list, we start calling and advertising your business.")
 
 with right_column:
     st_lottie(lottie_coding, height=300, key="coding")
@@ -66,46 +67,16 @@ with st.container():
     st.write(":thumbsup: paid for the 25 dollar package and was provided 25 businesses, I didn't get any new leads from there. so I expanded the distance on my location and paid for the 50 businesses. Sure enough four new leads. Great investment")
 
 
+import streamlit as st
 with st.container():
     st.write("---")
-    st.header(":e-mail: Get In Touch With Us")
-    st.write("##")
-    contact_form = """
-<form action="https://formsubmit.co/istanford@liberty.edu" method="POST">
-    <input type="hidden" name="_captcha" value="false"> 
-     <input type="text" name="name" placeholder="Your name" required>
-     <input type="email" name="email" placeholder="Your email" required>
-     <textarea name="message" placeholder="Your message here" required></textarea>
-     <button type="submit" class-button>Send</button>
-    </form>
-    """
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.markdown(contact_form, unsafe_allow_html=True)
-    with right_column:
-        st.empty()
+def main():
+    st.title(":e-mail: Get In Touch With Us")
+    st.markdown("Just send me an email with the package you are interested in at [leadgenerator_1@aol.com](mailto:leadgenerator_1@aol.com)")
 
+if __name__ == "__main__":
+    main()
 
-
-
-
-
-# Primary accent for interactive elements
-primaryColor = '#7792E3'
-
-# Background color for the main content area
-backgroundColor = '#273346'
-
-# Background color for sidebar and most interactive widgets
-secondaryBackgroundColor = '#B9F1C0'
-
-# Color used for almost all text
-textColor = '#FFFFFF'
-
-# Font family for all text in the app, except code blocks
-# Accepted values (serif | sans serif | monospace)
-# Default: "sans serif"
-font = "sans serif"
 
 
 

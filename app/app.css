@@ -1,0 +1,20 @@
+body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+h1 {
+    font-size: 48px;
+    color: yellow;
+    text-shadow: 2px 2px 4px #000000;
+}
+p {
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+}
+.emoji {
+    font-size: 36px;
+    display: inline;
+}
